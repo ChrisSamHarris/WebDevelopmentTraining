@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+  background-color: rgb(233, 215, 207);
+  margin: 50px;
+  /* this impacts the image, moving the image to the center - addressing the parent can sometimes be the fix  */
+}
+
+img {
+  width: 200px;
+  height: 120px;
+  border-radius: 90px;
+}
+
+h1 {
+  font-family: "Oswald", Verdana;
+  /* first font is the font.google import, if this fails it will present Verdana font */
+  color: rgb(123, 66, 216);
+}
+
+p {
+  font-family: "Roboto", Verdana;
+  color: rgb(82, 69, 69);
+}
+
+a {
+  font-family: Verdana;
+  color: rgb(123, 66, 216);
+  text-decoration: none;
+}
+a:hover {
+  /* Mouse hovering over the element */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#i-1a {
+  color: rgb(170, 96, 83);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#i-2d {
+  font-size: 10px;
+}
+
+/* fonts.google.com - import fonts from googl in order to utilise them in HTML 
+  Defined in the <head> tag */

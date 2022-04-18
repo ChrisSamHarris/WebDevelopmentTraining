@@ -1,0 +1,90 @@
+body {
+    background: linear-gradient(30deg, rgb(77, 77, 77), rgb(58, 58, 58));
+    color: rgb(77, 77, 77);
+}
+
+#page-title {
+    color: rgb(183, 230, 235);
+}
+
+header {
+    position: static;
+}
+
+.main-list {
+    color: rgb(183, 230, 235);
+}
+
+.main-list:hover {
+    color: black;
+    background-color: rgb(183, 230, 235);
+}
+
+main ul {
+    width: 1600px;
+    margin: 0 auto 48px auto;
+    /* css grid to create 2D layouts (columns and rows) - not flexbox (1D layouts) ! */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+}
+
+main li {
+    display: flex;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    overflow: hidden;  
+    /* width: 800px; */
+}
+
+main li img {
+    width: 300px;
+    height: 280px;
+    /* image exceeds the border of the container - 
+    change with overflow property - needs to be applied to container itseld main li */
+    object-fit: cover;
+}
+
+/* li:first-of-type {
+    background-color: yellow;
+} */
+
+/* li:nth-of-type(3) {
+    background-color: yellow;
+} */
+
+li:nth-of-type(3) {
+    grid-column: 1 / span 2;
+}
+
+li:nth-of-type(10) {
+    grid-column: 1 / span 2;
+}
+
+.item-content {
+    padding: 24px;
+    /* display flex puts items next to one another */
+    display: flex;
+    flex-direction: column; /* this results in the properties within the container being side-by-side */
+    justify-content: space-between; /* with the div layouts in HTML this creates space away from the "explore" link */
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions a {
+    color: rgb(87, 183, 228);
+    text-decoration: none;
+    margin: auto;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.actions a:hover {
+    background-color: rgb(87, 183, 228);
+    text-decoration: none;
+    color: white;
+}
+

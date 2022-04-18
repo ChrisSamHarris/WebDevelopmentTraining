@@ -1,0 +1,109 @@
+#hero {
+    height: 800px;
+    /* in this case the image is improted via CSS and not HTML */
+    background-image: url("../images/places/mountain.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+#hero-content {
+    width: 900px;
+    background-color: rgba(51, 47, 47, 0.6);
+    /* rgba = transparency in image */
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    border-radius: 8px;
+    text-align: center;
+    padding: 50px 0;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+#hero-content h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+#hero-content p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 32px;
+}
+
+
+#hero-content a {
+    text-decoration: none;
+    background-color: rgba(255, 251, 0, 0.911);
+    padding: 12px 24px;
+    /* just two inputs on padding = Top&Bottom Left&Right */
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    /* border radis is the curve on the background border */
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+}
+
+#hero-content a:hover {
+    background-color: rgba(216, 182, 29, 0.863);
+    color: white;
+    border-color: black;
+}
+
+#highlights {
+    padding: 24px;
+    /* functions - default capability within CSS - gradient  */
+    background: linear-gradient(180deg, rgb(252, 179, 70), rgb(240, 200, 76));
+}
+
+#highlights h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(59, 65, 64);
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#destinations {
+    display:flex;
+    width: 90%;
+    /* margin auto will center the container */
+    margin: auto;
+    margin-bottom: 40px;
+    justify-content: center;
+    /* This property with center as value applied, centers the flex items along the main axis, which goes left-to-right for Flexbox' default value for the flex-direction (row). */
+}
+
+.destination-items {
+    margin: 0 20px auto;
+    text-transform: uppercase;
+}
+
+.destination-items p {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(124, 123, 123);
+    margin: 20px 0;
+}
+
+.destination-items img {
+    height: 200px;
+    /* width: 250px; - cant do this as the flex container means the space isnt utilised appropriately: utilise % */
+    width: 400px;
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    border-radius: 10px;
+    /* cover will ensure as much image as possible in the container whilst keeping its aspect ratio */
+    object-fit: cover;
+    justify-content: center;
+}
+
+.destination-items strong {
+    color: rgb(0, 150, 117)
+}

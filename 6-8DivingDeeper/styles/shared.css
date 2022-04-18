@@ -1,0 +1,14 @@
+header {
+  margin-bottom: 0px;
+  padding: 2px;
+}
+
+body {
+  text-align: center;
+  background-color: rgb(233, 215, 207);
+  /* this impacts the image, moving the image to the center - addressing the parent can sometimes be the fix  */
+}
+
+p {
+  font-size: 24px;
+}

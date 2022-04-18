@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./chall-style.css" />
+    <title>Challenge Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/Challenge/" method="GET">
+        <!-- ACTION- where you want the user data to be sent onto (URL typically)
+          METHOD - choose the type of http requst that should be sent ie. GET or POST
+          GET : Retrieve data (query string parameters) - added into the URL
+          POST : Doesnt work without a server side to handle request - Submit a form (typically forms are submitted to store user data to a DB in abackend ) this will currently cause a 405 status code - POST not allowed -->
+        <section id="help" class="block">
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="username">Your Full Name</label>
+              <input
+                type="text"
+                name="user-name"
+                id="username"
+                required
+                placeholder="First Last"
+              />
+              <!-- placeholder and value are different - placeholder persists! -->
+            </li>
+            <li>
+              <label for="useremail">Your Email Address</label>
+              <input
+                type="email"
+                name="user-email"
+                id="useremail"
+                placeholder="person@email.com"
+                required
+              />
+            </li>
+            <li>
+              <label for="usermobile">Your Mobile Number</label>
+              <input
+                type="tel"
+                name="user-mobile"
+                id="usermobile"
+                required
+                minlength="9"
+                maxlength="13"
+              />
+            </li>
+            <li>
+              <label for="usermessage">Your Message</label>
+              <textarea
+                name="user-message"
+                id="usermessage"
+                cols="30"
+                rows="8"
+                maxlength="300"
+              ></textarea>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <label for="how-find">How did you find us?</label>
+          <select name="how-find-us" id="how-find">
+            <option value="">Google</option>
+            <option value="">Web Site</option>
+            <option value="">Third Party Site</option>
+            <!-- value isnt necessary for drop down menus - if you want something different than the value provided (i.e. shorten the input sent to machine/server) then you can set the optional value="" parameter  -->
+          </select>
+        </section>
+        <!-- Radio Buttons -->
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-sms"
+                value="text-message"
+                required
+              />
+              <label for="reply-sms">Via Text Message (SMS)</label>
+            </li>
+            <li class="control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-phone"
+                value="phone"
+                required
+              />
+              <label for="reply-phone">Via Phone Call</label>
+            </li>
+            <li class="control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="reply-email"
+                value="email"
+                required
+              />
+              <label for="reply-email">Via Email</label>
+            </li>
+            <li class="control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="dont-reply"
+                value="dont"
+                required
+              />
+              <label for="dont-reply">Dont Reply</label>
+            </li>
+            <!-- name can be used to group multiple inputs together - name is used for the reciever (me/ computer) = you can see it with submission in the URL
+            user doesnt see the value with regards to radio buttons -->
+          </ul>
+        </section>
+        <hr />
+        <!-- Terms -->
+        <section>
+          <div class="control-inline">
+            <input type="checkbox" name="terms" id="agree-terms" required />
+            <label for="agree-terms">Accept Terms</label>
+          </div>
+        </section>
+        <!-- provding a name value on the input file, the input will be stored under inspect - network > Form Data > payload -->
+        <!-- Button -->
+        <section id="form-action">
+          <!-- <button type="reset">Clear</button> -->
+          <button id="btn-empty" type="reset">Clear</button>
+          <button id="btn-filled" type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+    <!-- Form makeup -->
+    <!-- form finish -->
+  </body>
+</html>

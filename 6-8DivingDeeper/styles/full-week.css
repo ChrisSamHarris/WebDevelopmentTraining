@@ -1,0 +1,76 @@
+h1 {
+  font-size: 48px;
+  color: rgb(71, 62, 62);
+  font-family: "Oswald";
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+#description {
+  margin: 12px 0;
+  padding-bottom: 5px;
+}
+
+a {
+  padding: 12px 48px;
+  background-color: rgb(167, 1, 78);
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgb(167, 1, 78);
+  border-radius: 4px;
+  font-size: 24px;
+  display: inline-block;
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+  background-color: rgb(180, 12, 90);
+}
+
+p {
+  font-family: "Roboto", Verdana;
+  color: rgb(82, 69, 69);
+}
+
+ol {
+  list-style: none;
+  color: rgb(3, 3, 3);
+  width: 500px;
+  margin: 36px auto 0 auto;
+  padding: 5px;
+}
+
+li {
+  padding: 16px;
+  margin: 32px;
+  background-color: rgb(221, 138, 127);
+  border-radius: 6px;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.2);
+}
+
+header p {
+  margin-bottom: 12px;
+  padding-bottom: 5px;
+  /*   Does the same as #description */
+}
+
+main p {
+  margin: 12px;
+  color: rgb(71, 29, 22);
+}
+
+h2 {
+  color: rgb(78, 13, 5);
+  font-family: "Oswald", sans-serif;
+}
+
+.highlight-goal {
+  background-color: rgb(224, 124, 111);
+}
+
+/*   Cascading logic - if there is multiple features applied - the last one wins: Cascading = last wins 
+  This will be inherited from OL as this is inside */
+
+/* fonts.google.com - import fonts from googl in order to utilise them in HTML 
+    Defined in the <head> tag */

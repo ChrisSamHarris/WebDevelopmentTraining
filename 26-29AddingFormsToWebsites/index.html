@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <!-- ACTION- where you want the user data to be sent onto
+          METHOD - choose the type of http requst that should be sent ie. GET or POST
+          GET : Retrieve data (query string parameters) - added into the URL
+          POST : Submit a form (typically forms are submitted to store user data to a DB in abackend ) this will currently cause a 405 status code - POST not allowed -->
+        <section>
+          <h2>Admin</h2>
+          <ul>
+            <li>
+              <label for="username">Username</label>
+              <input type="text" name="user-name" id="username" required placeholder="chharris"/>
+              <!-- placeholder and value are different - placeholder persists! -->
+            </li>
+            <li>
+              <label for="useremail">Your email address</label>
+              <input type="email" name="user-email" id="useremail" />
+            </li>
+            <li>
+              <label for="userpassword">Your password</label>
+              <input type="password" name="user-password" id="userpassword" required minlength="7" />
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Your details</h2>
+          <ul>
+            <li>
+              <label for="userage">Your age</label>
+              <input type="number" step="1" name="user-age" id="userage" min="18" max="100" />
+            </li>
+            <li>
+              <label for="birthday">Birthdate</label>
+              <input type="date" name="user-birthday" id="birthday" min="1921-01-01"/>
+            </li>
+            <li>
+              <label for="fav-col">Favourite colour?</label>
+              <select name="favourite-colour" id="fav-col">
+                <option value="">Blue</option>
+                <option value="">Black</option>
+                <option value="">Red</option>
+                <!-- value isnt necessary for drop down menus - if you want something different than the value provided (i.e. shorten the input sent to machine/server) then you can set the optional value="" parameter  -->
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          
+          <label for="usermessage">Your message</label>
+          <textarea
+            name="user-message"
+            id="usermessage"
+            cols="30"
+            rows="8"
+          ></textarea>
+        </section>
+
+        <section>
+          <h2>How should we verify your account?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-sms"
+                value="text-message"
+                required
+              />
+              <label for="verify-sms">Via Text Message (SMS)</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+                required
+              />
+              <label for="verify-phone">Via Phone Call</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+                required
+              />
+              <label for="verify-email">Via Email</label>
+            </li>
+            <!-- name can be used to group multiple inputs together - name is used for the reciever (me/ computer) = you can see it with submission in the URL
+            user doesnt see the value with regards to radio buttons -->
+            
+
+           
+          </ul>
+        </section>
+
+        <section>
+          <h2>How should we Contact You?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                name="contact"
+                id="contact-email"
+                value="email"
+              />
+              <label for="contact-email">Contact by email?</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="checkbox"
+                name="contact"
+                id="contact-phone"
+                value="phone"
+              />
+              <label for="contact-phone">Contact by phone?</label>
+            </li>
+          </ul>
+        </section>
+        
+        <hr />
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" name="terms" id="agree-terms" />
+            <label for="agree-terms">Agree to terms?</label>
+          </div>
+        </section>
+
+        <!-- provding a name value on the input file, the input will be stored under inspect - network > Form Data > payload -->
+    
+        <section>
+          <!-- <button type="reset">Clear</button> -->
+          <button type="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+    <!-- Form makeup -->
+    <!-- form finish -->
+  </body>
+</html>
